@@ -118,7 +118,11 @@ const Login = () => {
 
             </div>
             <div className="bg-white w-2/12 p-4 mx-auto shadow-lg rounded-[10px] text-center">
-                <h1>Dark Mode</h1>
+                <h1 className="text-xl font-bold  mb-4">
+                    {
+                        themeSlice ? 'Dark Mode' : 'Light Mode'
+                    }
+                </h1>
                 <input type="checkbox" 
                 checked={themeSlice} 
                 onChange={()=>dispatch(setTheme()) } 
