@@ -3,7 +3,7 @@ import storage from 'redux-persist/lib/storage'
 import {persistReducer} from 'redux-persist'
 import loginSlice from './slice/login-slice'
 import { version } from "react";
-
+import themeSlice from './slice/theme-slice'
 const setUp = {
     key : 'codingGuru',
     version : 1,
@@ -11,7 +11,8 @@ const setUp = {
 }
 
 const slices = combineReducers({
-    loginSlice
+    loginSlice,
+    themeSlice
 })
 
 const store = configureStore({
